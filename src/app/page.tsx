@@ -15,8 +15,8 @@ type PageProps = {
 export default function Home({ params, searchParams }: PageProps) {
   const { isEnabled: isDraftModeEnabled } = draftMode();
   const token = isDraftModeEnabled
-    ? searchParams.token?.toString()
-    : 'undefined';
+    ? searchParams.token
+    : undefined;
 
   return (
     <main className='flex min-h-screen flex-col items-center justify-between p-24'>
@@ -37,7 +37,7 @@ export default function Home({ params, searchParams }: PageProps) {
           Draft mode: {isDraftModeEnabled ? 'ENABLED' : 'DISABLED'}
         </p>
         <p className='mb-5 border border-gray-300 bg-gradient-to-b from-zinc-200 backdrop-blur-2xl rounded-xl bg-gray-200 p-4'>
-          Token: {token}
+          Token: {`${token}`}
         </p>
         <div className='mb-5 border border-gray-300 bg-gradient-to-b from-zinc-200 backdrop-blur-2xl rounded-xl bg-gray-200 p-4'>
           Static generation:
