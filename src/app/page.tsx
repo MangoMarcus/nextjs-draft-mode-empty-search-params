@@ -39,6 +39,9 @@ export default function Home({ params, searchParams }: PageProps) {
         <p className='mb-5 border border-gray-300 bg-gradient-to-b from-zinc-200 backdrop-blur-2xl rounded-xl bg-gray-200 p-4'>
           Token: {`${token}`}
         </p>
+        <p className='mb-5 border border-gray-300 bg-gradient-to-b from-zinc-200 backdrop-blur-2xl rounded-xl bg-gray-200 p-4'>
+          Rendered: {new Date().toISOString()}
+        </p>
         <div className='mb-5 border border-gray-300 bg-gradient-to-b from-zinc-200 backdrop-blur-2xl rounded-xl bg-gray-200 p-4'>
           Static generation:
           <br />
